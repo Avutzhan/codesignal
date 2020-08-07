@@ -43,6 +43,7 @@ function almostIncreasingSequence($sequence) {
     return true;
 }
 
+//Second solution
 function almostIncreasingSequence2($sequence) {
     $mistakes = 0;
     //we will begin from 0 until -1 index from the end of array because php will throw fatal error
