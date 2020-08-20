@@ -65,7 +65,7 @@ function almostIncreasingSequence2($sequence) {
                 $mistakes++;
         }
 
-        //id mistake more than 1 return false
+        //if mistakes more than 1 return false
         if($mistakes > 1)
             return false;
     }
