@@ -45,22 +45,31 @@ function almostIncreasingSequence($sequence) {
 
 function almostIncreasingSequence2($sequence) {
     $mistakes = 0;
-
+    //we will begin from 0 until -1 index from the end of array because php will throw fatal error
+    //if php doesnt find undefined index
     for($i = 0; $i < count($sequence)-1; $i++) {
+        //if integer more than or equal to next integer we will check
         if($sequence[$i] >= $sequence[$i+1]) {
+            //if length of array more than next through 1 integer and
             if(count($sequence) > $i+2 &&
+                //integer more than or equal to next through 1 integer and
                 $sequence[$i] >= $sequence[$i+2] &&
+                //if the iteration is not first and
                 $i > 0 &&
+                //prev integer more than or equal to next integer then return false
                 $sequence[$i-1] >= $sequence[$i+1]) {
                 return false;
             }
             else
+                //else increment mistake
                 $mistakes++;
         }
 
+        //id mistake more than 1 return false
         if($mistakes > 1)
             return false;
     }
 
+    //check passed then return true
     return true;
 }
