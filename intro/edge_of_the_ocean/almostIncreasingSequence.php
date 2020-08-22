@@ -70,6 +70,6 @@ function almostIncreasingSequence2($sequence) {
             return false;
     }
 
-    //check passed then return true
+    //check passed
     return true;
 }
