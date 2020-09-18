@@ -11,18 +11,31 @@ function shapeArea1(n) {
 //when we count n * n remains to count n - 1 and this layer form second polygon wich consists from n - 1 blocks
 //so you just do same step and multiply (n-1) * (n-1)
 //and result will be n * n + (n-1) * (n-1)
-
-function shapeArea(n) {
-    return (1 + (n-1)*n) *2 - 1;
-}
-
-shapeArea3=n => {
-    return n * (n-1) * 2 + 1
-}
-
-
+//this is a complex solution
 
 function shapeArea2(n) {
+    return (1 + (n-1)*n) *2 - 1;
+}
+//Solution 2
+//step1 1 + (n-1)*n this is a half of the polygon + 1 square
+//step2 when you know the half of polygon then you must multiply to two
+//step3 - 1 because there is a 1 center
+//this is solution directed from left to right
+//there is we subtract 1 from result
+
+
+function shapeArea3(n) {
+    return (n-1) * n * 2 + 1
+}
+//Solution3
+//similar to solution 2
+//step1 (n-1) * n half of polygon
+//step2 step1 * 2 full polygon
+//step3 add center + 1
+//there is we adding + 1 to result
+
+
+function shapeArea4(n) {
     return Math.pow(n, 2) + Math.pow(n-1, 2);
 }
 
