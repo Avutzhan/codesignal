@@ -39,4 +39,9 @@ function shapeArea4(n) {
     return Math.pow(n, 2) + Math.pow(n-1, 2);
 }
 
+//solution4
+//this solution similar to the first solution
+//Math.pow(n, 2) = n*n
+//Math.pow(n-1, 2) = (n-1)*(n-1)
+
 
