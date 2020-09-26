@@ -4,7 +4,14 @@ function almostIncreasingSequence(sequence) {
         if(sequence[i]<=sequence[i-1]) {
             bad++;
             if(bad>1) return false;
+
             if(sequence[i]<=sequence[i-2]&&sequence[i+1]<=sequence[i-1]) return false;
+            //i tried to use this example and convert it to php code but encountered the error
+            //with arrays
+            //in js if you mess with array index you get undefined and if you put in condition statement
+            //js will understand this as true or false == undefined
+            //but php doesnt understand this and return error undefined offset
+            //so in this conditional statement i must make other logic
         }
     }
 
