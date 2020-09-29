@@ -18,3 +18,5 @@ function allLongestStrings(inputArray) {
     }
     return arr;
 }
+
+//without describing code
